@@ -1,0 +1,80 @@
+body {
+    background: #013440;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#content {
+    width: 95%;
+    margin: auto;
+    background:#013440ed;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+#mainheader {
+    background: #04C4D9;
+    color:white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+/* main navigation */
+#mainnav ul {
+    list-style-type: none; /*removes the bullets */
+    padding-left: 0px;
+}
+#mainnav li {
+    border-bottom: 1px solid white;
+}
+#mainnav a{
+    color: white;
+    text-decoration: none; /* removes underlines */
+    display: block;
+    padding:10px;
+
+}
+#mainnav a:hover {
+    background: white;
+    color: #0378A6;
+}
+
+/* typography */
+h1 {
+    text-align: center;
+}
+
+/*larger devices  */
+@media only screen and (min-width: 760px) {
+    body {
+        background: url(images/waterbackdrop.jpg);
+        background-size: cover;
+    }
+    #content {
+        width:70%;
+    }
+
+    /* columns */ 
+    .columns {
+
+        display:flex;
+    }
+
+    /* main nav*/
+    #mainnav li {
+        border:none;
+        flex:1;
+    }
+
+    #mainnav a {
+        text-align: center;
+        padding:5x;
+    }
+
+    #mainnav a:hover {
+        background:white;
+        color: #0378A6;
+        border-bottom: 1px white;
+    }
+}
