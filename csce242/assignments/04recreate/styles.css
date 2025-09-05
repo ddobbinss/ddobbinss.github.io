@@ -5,6 +5,9 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+a {
+    text-decoration: none;
+}
 #content {
     position:relative;
 }
@@ -39,6 +42,71 @@ body {
     border-bottom:solid white 1px;
 }
 
+
+#front-image img{
+    width: 100%;
+}
+#front-image h1 {
+    color:var(--garnet);
+    font-size: 24px;
+}
+
+
+#large-text p {
+    font-family: Georgia;
+    text-align: center;
+    padding:20px;
+    font-size:30px;
+}
+#future-section {
+    background:var(--garnet);
+    color:white;
+}
+#future-section {
+    padding:10%;
+}
+#future-section a {
+    padding:10px;
+    color:white;
+    background:black;
+    text-decoration: none;
+    border:solid 2px white;
+    transition: 0.2s;
+}
+#future-section a:hover {
+    background: white;
+    color:var(--garnet);
+}
+#future-image {
+    background:var(--garnet);
+    padding:20px;
+}
+#future-image img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+#program-div {
+    text-align: center;
+}
+#program-links {
+    text-align: center;
+    
+}
+#program-links a {
+    padding:10px;
+    color:white;
+    background:var(--garnet);
+    text-decoration: none;
+    border:solid 2px white;
+    transition: 0.2s;
+}
+#program-links a:hover {
+    background: white;
+    color:var(--garnet);
+    border:solid 2px var(--garnet);
+}
+
 @media only screen and (min-width: 760px) {
 
     .columns {
@@ -61,6 +129,44 @@ body {
     #main-nav li {
         flex:1;
     }
+    #front-image {
+        position:relative;
+    }
+    #front-image h1 {
+        position:absolute;
+        background:rgba(255,255,255,0.8);
+        font-size: 34px;
+        padding-left:100px;
+        padding-right:100px;
+        padding:30px;
+        bottom:10%;
+        width:50%;
+    }
+    #large-text {
+        width:100%;
+    }
+    #large-text p {
+        padding-left:25%;
+        padding-right:25%;
+    }
+
+    #future-div {
+        width:100%;
+    }
+    #future-section {
+        position:relative;
+        flex:1;
+    }
+    #future-section a {
+        position: absolute;
+        top:55%;
+    }
+    #future-image {
+        padding:0px;
+        
+    }
+
+
 
     
 }
