@@ -1,5 +1,6 @@
 :root {
 --garnet:#74000b;
+--secondaru-blue:#1f414d;
 }
 
 body {
@@ -152,11 +153,7 @@ a {
     background:var(--garnet);
     color:white;
 }
-#quote-container {
-    padding-left:15%;
-    padding-right:10%;
 
-}
 #quote-image {
     text-align: center;
     padding:10px;
@@ -169,6 +166,7 @@ a {
 }
 #quote-text {
     padding-top:60px;
+    padding-bottom:20px;
 }
 #quote-text p{
     font-size: 20px;
@@ -176,6 +174,78 @@ a {
     margin:5px;
 }
 
+#connection-div {
+    background:var(--secondaru-blue);
+}
+#connection-text {
+    color:white;
+    padding:20px;
+}
+#connection-text p {
+    padding-bottom:10px;
+}
+#connection-text a {
+    background:var(--garnet);
+    color:white;
+    padding:10px;
+    text-decoration: none;
+    border:solid white 2px;
+    transition: 0.2s;
+}
+#connection-text a:hover {
+    background:white;
+    color:var(--garnet);
+    border:solid var(--garnet) 2px;
+}
+#connection-image {
+    padding-top:30px;
+    padding:20px;
+}
+#connection-image img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+#news-header {
+    color:var(--garnet);
+    text-align: center;
+    padding:20px;
+}
+
+.news-section {
+    width: fit-content;
+    margin-top:30px;
+    text-align: center;
+}
+.news-section img {
+    display:inline-block;
+}
+.news-section h1 {
+    color:var(--garnet);
+}
+.news-section h1, .news-section p {
+    width: auto;
+}
+.news-section p {
+    padding-bottom:15px;
+}
+.news-section a{
+    background:var(--garnet);
+    color:white;
+    padding:20px;
+    text-decoration: none;
+    border:solid white 2px;
+    transition: 0.2s;
+    display:block;
+    text-align: center;
+    margin:5%;
+}
+.news-section a:hover {
+    background:white;
+    color:var(--garnet);
+    border:solid var(--garnet) 2px;
+}
 
 @media only screen and (min-width: 760px) {
 
@@ -246,11 +316,33 @@ a {
         right:10%;
         bottom:10%;
     }
-
-    #quote-div {
-        
+    #quote-container {
+        padding-left:15%;
+        padding-right:10%;
     }
 
+    #connection-text {
+        padding:30px;
+        padding-left:40px;
+        padding-top:10%;
+    }
+    #connection-text h1 {
+        font-size: 32px;
+        width:70%;
+    }
+    #connection-image {
+        padding:0;
+    }
+    .news-section img {
+        width:90%;
+        height:auto;
+        display:block;
+        padding:10px;
+    }
+    .news-section h1, .news-section p {
+    width:auto;
+    padding-left:10px;
+}
 
     
 }
