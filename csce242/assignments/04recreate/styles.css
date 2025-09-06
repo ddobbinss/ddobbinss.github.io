@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia;
 }
 a {
     text-decoration: none;
@@ -65,13 +65,18 @@ a {
 #future-section {
     padding:10%;
 }
+#future-section p {
+    padding-bottom:15px;
+}
 #future-section a {
-    padding:10px;
+    padding:15px;
     color:white;
     background:black;
     text-decoration: none;
     border:solid 2px white;
     transition: 0.2s;
+    margin-top:10px;
+
 }
 #future-section a:hover {
     background: white;
@@ -88,24 +93,89 @@ a {
 }
 #program-div {
     text-align: center;
+    padding-bottom:25px;
+}
+#program-div p {
+    padding:10px;
 }
 #program-links {
-    text-align: center;
-    
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #program-links a {
-    padding:10px;
+    padding:15px;
     color:white;
     background:var(--garnet);
     text-decoration: none;
     border:solid 2px white;
     transition: 0.2s;
+    margin:5%;
+    box-shadow: rgba(0, 0, 0, 0.8);
 }
 #program-links a:hover {
     background: white;
     color:var(--garnet);
     border:solid 2px var(--garnet);
 }
+#impact-div img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+#impact-section {
+    background:black;
+    color:white;
+    width:fit-content;
+    padding:25px;
+    padding-bottom:40px;
+}
+#impact-section p {
+    padding-bottom:10px;
+}
+#impact-section a {
+    background:var(--garnet);
+    color:white;
+    padding:10px;
+    text-decoration: none;
+    border:solid white 2px;
+    transition: 0.2s;
+}
+#impact-section a:hover {
+    background:white;
+    color:var(--garnet);
+    border:solid var(--garnet) 2px;
+}
+
+#quote-div {
+    background:var(--garnet);
+    color:white;
+}
+#quote-container {
+    padding-left:15%;
+    padding-right:10%;
+
+}
+#quote-image {
+    text-align: center;
+    padding:10px;
+}
+#quote-image img {
+    border-radius: 50%;
+    width:auto;
+    height:auto;
+    display:block;
+}
+#quote-text {
+    padding-top:60px;
+}
+#quote-text p{
+    font-size: 20px;
+    padding-top:50px;
+    margin:5px;
+}
+
 
 @media only screen and (min-width: 760px) {
 
@@ -163,9 +233,23 @@ a {
     }
     #future-image {
         padding:0px;
-        
+    }
+    #program-links a {
+        margin:15px;
+    }
+    #impact-div {
+        position:relative;
+    }
+    #impact-section {
+        width:40%;
+        position:absolute;
+        right:10%;
+        bottom:10%;
     }
 
+    #quote-div {
+        
+    }
 
 
     
