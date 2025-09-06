@@ -343,19 +343,23 @@ a {
 }
 #big-footer {
     background:var(--garnet);
+    padding:20px;
+    align-items: center;
 }
-#big-footer .columns {
+#big-footer-divider {
     display:flex;
     flex-direction: column;
     gap:20px;
 }
-#big-footer-divider {
-    display:flex;
-    flex-wrap:wrap;
+#big-footer img {
+    max-width: 100%;
+    height:auto;
 }
 #schools {
     display:flex;
     flex-direction: column;
+    padding-bottom: 5px;
+    margin-bottom:10px;
 }
 #division {
     display:flex;
@@ -367,10 +371,21 @@ a {
 }
 .text-anchor {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     text-decoration: none;
     color:white;
     transition:0.2s;
+    margin:0;
+    padding:0;
+    gap: 5px;
+}
+.text-anchor li {
+    flex: 0 0 40%;
+}
+.text-anchor li a {
+    display:block;
+    padding: 5px 10px;
 }
 .text-anchor a:hover {
     background:white;
@@ -529,6 +544,16 @@ a {
     }
     #adress-section {
         padding-left:10px;
+    }
+
+    #big-footer {
+        padding-left:15%;
+        padding-right:15%;
+    }
+    #big-footer-divider {
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:flex-start;
     }
   
 
