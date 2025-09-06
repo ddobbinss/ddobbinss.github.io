@@ -26,16 +26,18 @@ h1,h2 {
     padding: 10px;
     margin-bottom:10px;
 }
-
+#mainnav li {
+    width:100%;
+    height:auto;
+}
 #mainnav a:hover {
     background: #65791b;
 }
 
-
-
-#mainnav ul {
+#mainnav ul.columns {
     list-style-type: none;
-    align-items: center;
+    padding:0;
+    margin:0;
 }
 
 
@@ -45,7 +47,12 @@ h1,h2 {
     object-fit: cover;
     display:block;
     padding: 5px;
-    align-self: center;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 760px) {
@@ -56,9 +63,16 @@ h1,h2 {
 
     .columns {
         display: flex;
+        flex-wrap: wrap;
+        gap:10px;
+        align-items: stretch;
     }
-    #mainnav li {
-        margin: 10px;
+    .columns li {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #mainnav li a {
         border:none;
         flex:1;
     }
