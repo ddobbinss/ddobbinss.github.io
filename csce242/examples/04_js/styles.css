@@ -233,6 +233,15 @@ footer p {
     text-align:center;
 }
 
+.happy-clicked {
+    background:green;
+    color:white;
+}
+.sad-clicked {
+    background:red;
+    color:white;
+}
+
 #map {
     width:100%;
     height:500px;
