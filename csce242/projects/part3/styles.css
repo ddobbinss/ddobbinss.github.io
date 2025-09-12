@@ -1,0 +1,68 @@
+
+:root {
+    --text-teal:#5ba090;
+}
+body {
+    font-family: Georgia;
+    margin:0;
+    padding:0;
+}
+#header {
+
+    background:url("images/header-backdrop.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    padding-top:10px;
+
+
+}
+#header header {
+
+    color:white;
+    font-size:46px;
+    align-items: center;
+    text-align: center;
+    margin:20px;
+    
+}
+#main-nav {
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 5%, #5ba090 70%);
+    padding-top:35px;
+    align-items: center;
+    padding-bottom:10px;
+
+    
+}
+#main-nav ul{
+    list-style-type: none;
+    justify-content: center;
+    align-items:flex-end;
+    padding:0;
+    text-align: center;
+    gap:15px;
+}
+#main-nav a {
+    color:white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+#main-nav a:hover {
+    background:white;
+    color:var(--text-teal);
+
+}
+
+@media only screen and (min-width: 760px) {
+    .columns {
+        display: flex;
+    }
+    #header {
+        width: 100%;
+        margin:0 auto;
+    }
+    #main-nav ul {
+        gap:10%;
+        margin:30px;
+    }
+}
