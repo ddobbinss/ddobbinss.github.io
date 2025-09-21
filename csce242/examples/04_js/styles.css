@@ -241,10 +241,17 @@ footer p {
     background:red;
     color:white;
 }
+.error {
+    color:red;
+}
 
 #map {
     width:100%;
     height:500px;
+}
+#img-emotion {
+    width:100%;
+    height:auto;
 }
 
 

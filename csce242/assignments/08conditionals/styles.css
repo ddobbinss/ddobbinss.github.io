@@ -1,0 +1,98 @@
+:root {
+    --main-beige:#f1f2ea;
+    --text-blue:#668a96;
+    --text-red:#d08687;
+}
+
+body {
+    background:var(--main-beige);
+    margin:0;
+    align-items: center;
+}
+#page {
+    text-align: center;
+}
+#page h1 {
+    color:var(--text-blue);
+}
+#page h2 {
+    color:var(--text-red);
+}
+#content {
+    width:100%;
+    justify-content: center;
+}
+#btn-dropdown {
+    display: block;
+    background:none;
+    color:var(--text-blue);
+    text-align: left;
+    margin-left: 5px;
+    border: none;
+}
+#div-btns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+#div-btns.hide-small { /*since div-btns is display flex it overides none so you need this to beat it*/
+    display:none;
+}
+
+.btn-exercise {
+    background:none;
+    border:none;
+    color:var(--text-blue);
+}
+
+#div-exercises {
+    background:#ffffff;
+    border:solid 1px var(--text-blue);
+    margin: 0 5px;
+    
+}
+#div-planting {
+    text-align: center;
+}
+.hide {
+    display:none
+}
+.hide-small {
+    display:none;
+}
+
+/*planting*/
+
+#plant-img {
+    display:block;
+    width:250px;
+    height:auto;
+    margin:10px auto;
+}
+
+
+/*CLOCK */
+
+
+@media only screen and (min-width: 700px) {
+    .hide-small {
+        display:flex;
+    }
+    #div-btns.hide-small {
+        display:flex;
+    }
+    .hide-large {
+        display:none;
+    }
+    #btn-dropdown.hide-large {
+        display: none;
+    }
+
+    #div-btns {
+        color:var(--text-blue);
+        flex-direction: row;
+        justify-content: center;
+    }
+}
