@@ -1,0 +1,15 @@
+
+body {
+    background:#add9e6;
+}
+#content {
+    text-align: center;
+}
+
+#content h1 {
+    margin-top:0;
+    color:#6997a4;
+}
+#content h2 {
+    color:#bd969b;
+}
