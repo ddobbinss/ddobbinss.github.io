@@ -2,6 +2,9 @@
 body {
     background:#add9e6;
 }
+body.night {
+  background:black;
+}
 #content {
     text-align: center;
 }
@@ -12,4 +15,65 @@ body {
 }
 #content h2 {
     color:#bd969b;
+}
+#btn-draw {
+  margin-bottom:20px;
+}
+#sky {
+  display:flex;
+  justify-content: center;
+}
+#ground {
+  display:flex;
+  justify-content: center;
+}
+
+
+.cloud{ /*lord gpt created this art */
+  width:100px; height:60px;
+  background:#fff;
+  border-radius:50%;
+  position:relative;
+  box-shadow:
+    -35px 0 0 -5px #fff,
+    35px 0 0 -5px #fff,
+    -18px -15px 0 -5px #fff,
+    18px -18px 0 -5px #fff,
+    0 18px 0 -8px #fff;
+  border:2px solid #d7ecff;
+}
+
+.tree{  /*credit it ai gpt for the art  */
+  width:90px; height:150px;
+  background:
+    /* trunk */
+    linear-gradient(#8b5a2b 0 0) center bottom / 14px 45% no-repeat,
+    /* leaves (three overlapping blobs) */
+    radial-gradient(circle at 50% 35%, #2ecc71 36%, transparent 37%),
+    radial-gradient(circle at 32% 55%, #27ae60 30%, transparent 31%),
+    radial-gradient(circle at 68% 55%, #27ae60 30%, transparent 31%);
+  border-radius:10px;
+}
+
+.sun, .moon {
+  position: fixed;   /* fixed to the viewport */
+  top: 20px;
+  right: 20px;
+}
+/* Sun created by gpt  */
+.sun {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #FFD93B 70%, #FFB347 100%);
+  box-shadow: 0 0 20px #FFD93B, 0 0 40px #FFB347;
+}
+
+/* Moon created by gpt*/
+.moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f0f0f0 70%, #d9d9d9 100%);
+  box-shadow: inset -6px -4px 0 2px #cfcfcf;
 }
