@@ -15,6 +15,7 @@ h1,h2 {
     text-align: center;
 }
 #mainnav a {
+    width:200px;
     background:#8AA624;
     color:white;
     text-decoration: none;
@@ -27,7 +28,7 @@ h1,h2 {
     margin-bottom:10px;
 }
 #mainnav li {
-    width:100%;
+    width:200px;
     height:auto;
 }
 #mainnav a:hover {
