@@ -356,4 +356,8 @@ footer p {
     .hide-small {
         display:flex;
     }
+
+    #dog-list {
+        display:flex;
+    }
 }
