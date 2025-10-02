@@ -1,0 +1,10 @@
+[{
+    "_id":1,
+    "name":"Gemmatum Tang",
+    "species":"Zebrasoma gemmatum",
+    "region": "saltwater",
+    "length_cm": "10 cm",
+    "price" : "45.00",
+    "info": "The Gemmatum Tang is a small, colorful fish known for its striking appearance and peaceful nature. It is a popular choice for saltwater aquariums due to its vibrant colors and manageable size.",
+    "image": "images/gemmatumtang.png"
+}]
