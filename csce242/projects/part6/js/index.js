@@ -7,7 +7,7 @@ document.getElementById("hamburger-menu").onclick = () => {
 
 //extract fish
 const getFish = async () => {
-    const url = "fish.json";
+    const url = "https://ddobbinss.github.io/csce242/projects/part6/json/fish.json"
     try {
         const response = await fetch(url);
         return response.json();
@@ -35,7 +35,7 @@ const showFish = async () => {
 
         //add image
         const img = document.createElement("img");
-        img.src = fish.image;
+        img.src = `json/${fish.image}`;
         a.append(img);
 
         //add fish + species 
