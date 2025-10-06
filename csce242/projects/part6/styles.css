@@ -40,13 +40,40 @@ body {
     margin:20px;
     
 }
+
+/*BURGER MENU */
+#hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width:30px;
+    margin:0 auto;
+    padding-bottom:10px;
+}
+#hamburger-menu .bar {
+    width:35px;
+    height:4px;
+    background:white;
+    margin:4px 0;
+    border-radius:2px;
+}
 #main-nav {
     background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, #5ba090 70%);
     padding-top:30px;
     align-items: center;
     padding-bottom:2px;
 }
-#main-nav ul{
+#main-nav ul.columns:not(.hide-small) {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin:0 auto;
+}
+#main-nav ul.columns{
+    display:none;
+    flex-direction: row;
+    width:100%;
     list-style-type: none;
     justify-content: center;
     align-items:flex-end;
@@ -54,10 +81,12 @@ body {
     text-align: center;
 }
 #main-nav li {
-    margin-bottom:10px;
+    margin:10px 0;
+    width:100%;
 }
 #main-nav a {
     color:white;
+    width:100%;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -295,11 +324,13 @@ footer {
     align-items: center;
 }
 #cart-confirm {
-    background:green;
+    background:var(--seagreen2);
     color:white;
     padding:10px;
 }
-
+.hide-small {
+    display:none;
+}
 
 @media only screen and (min-width: 760px) {
     .columns {
@@ -308,6 +339,13 @@ footer {
         justify-content: center;
         gap: 20px;
     }
+    #hamburger-menu { /*hide burger menu on big screens */
+        display: none;
+    }
+    #main-nav .columns { /*show nav menu on big screen bc burger menu is hidden*/
+    display: flex !important;
+    flex-direction: column;
+}
     #page {
         background:url("images/header-backdrop.jpg");
         min-height: 100vh;
