@@ -33,33 +33,7 @@
                 </div>
                 <h1>Featured Fish</h1>
                 <div id="featured-div" class="columns">
-                    <section class="fish-item">
-                    <a href="fishpreview.html" class="a-fish-item">
-                        <img src="images/gemmatumtang.png">
-                        <h1>Gemmatum Tang ~ Zebrasoma gemmatum</h1>
-                        <p class="fish-region">Saltwater</p>
-                        <p class="fish-price">$45.00</p>
-                    </a>
-                    <button class="btn-cart"><b>Add to Cart</b></button>
-                </section>
-                <section class="fish-item">
-                    <a href="fishpreview.html" class="a-fish-item">
-                        <img src="images/blackmoore.png">
-                        <h1>Black Moor ~ Carassius auratus</h1>
-                        <p class="fish-region">Freshwater </p>
-                        <p class="fish-price">$24.00</p>
-                    </a>
-                    <button class="btn-cart"><b>Add to Cart</b></button>
-                </section>
-                <section class="fish-item">
-                    <a href="fishpreview.html" class="a-fish-item">
-                        <img src="images/angelfish.png">
-                        <h1>Angel Fish ~ Pterophyllum scalare</h1>
-                        <p class="fish-region">Freshwater</p>
-                        <p class="fish-price">$30.00</p>
-                    </a>
-                    <button class="btn-cart"><b>Add to Cart</b></button>
-                </section>
+                   
                 </div>
                 <h1 id="news-header">News & Announcents</h1>
                 <div id="news-div">
@@ -80,6 +54,20 @@
 
             
         </div>
-        <script src="js/index.js"></script>
+        <div id="fish-popup" class="hidden">
+           <div id="fish-popup-content">
+            <span id="close-popup">&times;</span>
+            <img id="popup-img" src="" alt="">
+            <div id="popup-info">
+                <h1 id="popup-name"></h1>
+                <h2 id="popup-species"></h2>
+                <h3 id="popup-price"></h3>
+                <p id="popup-description"></p>
+                <button class="btn-cart">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
     </body>
 </html>

@@ -71,14 +71,16 @@ body {
     margin:0 auto;
 }
 #main-nav ul.columns{
-    display:none;
     flex-direction: row;
-    width:100%;
+    align-items: center;
     list-style-type: none;
     justify-content: center;
     align-items:flex-end;
     padding:0;
     text-align: center;
+}
+#main-nav ul.columns.show {
+    display:flex;
 }
 #main-nav li {
     margin:10px 0;
@@ -365,8 +367,10 @@ footer {
     }
     #main-nav ul {
         gap:10%;
-        margin:30px;
         margin-bottom:0;
+    }
+    #main-nav li {
+        width: 80px;
     }
     
     /*SHOP PAGE */
