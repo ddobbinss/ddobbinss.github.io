@@ -297,7 +297,28 @@ footer p {
         margin:5px;
     }
 }
+#slideshow {
+    position:relative;
+}
+#slideshow img {
+    width: 100%;
+}
 
+#arrow-prev, #arrow-next {
+    position:absolute;
+    background:rgba(255,255,255,0.7);
+    text-decoration: none;
+    color:black;
+    font-size: 3em;
+    top:40%;
+    padding:10px;
+}
+#arrow-prev {
+    left:5%;
+}
+#arrow-next {
+    right:5%;
+}
 
 
 

@@ -58,6 +58,7 @@ const showFish = async () => {
         btn.innerHTML = "Add To Cart";
         section.append(btn);
 
+        section.onclick = () => showFishPopup(fish);
         fishDiv.append(section);
 
     });
@@ -124,20 +125,112 @@ const showFeaturedFish = async () => {
         console.error("fish error", error);
     }
 };
-//FISH POPUP SHOWS UP BOTTOM OF PAGE - FIX CSS TO MAKE POPUP WORK CORRECTLY 
+
 const showFishPopup = (fish) => {
     document.getElementById("popup-img").src = `json/${fish.image}`;
-    document.getElementById("popup-name").innerHTML = `${fish.name} ~ ${fish.species}`;
-    document.getElementById("popup-species").innerHTML = fish.region;
+    document.getElementById("popup-name").innerHTML = `${fish.name}`;
+    document.getElementById("popup-species").innerHTML = fish.species;
+    document.getElementById("popup-region").innerHTML = fish.region;
+    document.getElementById("popup-length").innerHTML = `Length: ${fish.length_cm}`
     document.getElementById("popup-price").innerHTML = `$${fish.price}`;
     document.getElementById("popup-description").innerHTML = fish.info;
 
-    document.getElementById("fish-popup").classList.add("hidden");
+    document.getElementById("fish-popup").classList.remove("hidden");
 }
 
 document.getElementById("close-popup").onclick = () => {
     document.getElementById("fish-popup").classList.add("hidden");
 }
 
+//filter buttons 
+let allFish = [];
+let activeFilter = null;
+
+const setupFilters = async () => {
+    try {
+        allFish = await getFish();
+
+        const btnSalt = document.getElementById("btn-salt-water");
+        const btnFresh = document.getElementById("btn-fresh-water");
+
+        btnSalt.onclick = async () => {
+            await handleFilter(btnSalt, "saltwater");
+        };
+
+        btnFresh.onclick = async () => {
+            await handleFilter(btnFresh, "freshwater");
+        };
+
+    } catch (error) {
+        console.log("filter setup error", error);
+    }
+};
+
+//FISH FILTERS
+const handleFilter = async (button, region) => {
+    const fishDiv = document.getElementById("fish-div");
+
+    //IF RECLICK RESET
+    if (activeFilter == region) {
+        activeFilter = null;
+        button.classList.remove("active-filter");
+        fishDiv.innerHTML = "";
+        await showFish();
+        return;
+    }
+
+    activeFilter = region;
+
+    //clear all button highlights
+    const allButtons = document.querySelectorAll("#fish-nav button");
+    for (const btn of allButtons) {
+        btn.classList.remove("active-filter");
+    }
+
+    //highlight current active
+    button.classList.add("active-filter");
+
+    //filter region type
+    const filtered = allFish.filter(fish => fish.region.toLowerCase() === region);
+    fishDiv.innerHTML = "";
+
+    //show only filtered 
+    for (const fish of filtered) {
+        const section = document.createElement("section");
+        section.classList.add("fish-item");
+
+        const img = document.createElement("img");
+        img.src = `json/${fish.image}`;
+        section.append(img);
+
+        const h1 = document.createElement("h1");
+        const h2 = document.createElement("h2");
+        h1.innerHTML = fish.name;
+        h2.innerHTML = fish.species;
+        section.append(h1);
+        section.append(h2);
+
+        const regionP = document.createElement("p");
+        regionP.classList.add("fish-region");
+        regionP.innerHTML = fish.region;
+        section.append(regionP);
+
+        const price = document.createElement("p");
+        price.classList.add("fish-price");
+        price.innerHTML = `$${fish.price}`;
+        section.append(price);
+
+        const btn = document.createElement("button");
+        btn.classList.add("btn-cart");
+        btn.innerHTML = "Add To Cart";
+        section.append(btn);
+
+        section.onclick = () => showFishPopup(fish);
+        fishDiv.append(section);
+    }
+};
+
+
+setupFilters();
 showFeaturedFish();
 showFish();
