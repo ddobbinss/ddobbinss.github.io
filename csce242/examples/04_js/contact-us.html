@@ -36,14 +36,44 @@
             </header>
             <main class="columns">
                 <section class="one">
-                    
+                    <form method="POST" id="contact-form">
+
+    
+                        <input type="hidden" name="access_key" value="5219852a-c7b2-4b0b-bc51-2d2c10f9a505">
+
+                        <p>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="message">Message</label>
+                            <textarea name="message" required></textarea>
+                        </p>
+                        
+    
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    
+                        <p><button type="submit">Submit Form</button></p>
+                        
+
+    
+                        <div id="result"></div>
+
+
+                    </form>
                 </section>
                 <section class="one">
                     <h3>Our Location</h3>
-                    
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7605217.910569421!2d97.65970644625072!3d30.073212677966264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36e4e73368bdcdb3%3A0xde8f7ccf8f99feb9!2sSichuan%2C%20China!5e1!3m2!1sen!2sus!4v1760457025776!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </section>
             </main>
         </div>
+        <script src="js/contact.js"></script>
         <script src="js/toggle-nav.js"></script>
     </body>
 </html>
