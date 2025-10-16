@@ -57,6 +57,42 @@ h3{
     text-align: center;
 }
 
+.node {
+    background: #8AA624;
+    color: white;
+    text-decoration: none;
+    display:block;
+    border-radius:5px;
+    text-align: center;
+    box-shadow: 0px 4px 8px #516311;
+    padding: 10px;
+    transition: background 0.2s;
+}
+.node:hover {
+    background: #65791b;
+}
+.node img {
+    width:90%;
+    object-fit: cover;
+    display:block;
+    padding: 5px;
+    margin: 0 auto;
+}
+.node .links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.node .links a {
+    background: white;
+    color: #8AA624;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px #516311;
+    transition: background 0.2s, color 0.2s;
+}
 @media only screen and (min-width: 760px) {
 
     #content {
@@ -67,15 +103,15 @@ h3{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding:0%;
         gap:20px;
-        margin:0 auto;
     }
 
     .columns li {
-        flex: 0 1 250px;
-        height:250px;
-        display: flex;
+        flex: 0 1 300px;
+        height:340px;
+        width:300px;
+        display:flex;
+        align-items:stretch;
     }
     #mainnav li a {
         border:none;
